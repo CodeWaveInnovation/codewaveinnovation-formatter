@@ -13,7 +13,7 @@ export interface FormatResult {
 export interface RuleConfig {
   name: string;
   enabled: boolean;
-  options?: Record<string, any>;
+  options?: Record<string, unknown>;
 }
 
 /**
