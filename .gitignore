@@ -6,3 +6,10 @@ coverage/
 *.tsbuildinfo
 .env
 .cwfrc.json
+
+# VitePress
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+
+# TypeDoc (se regenera automáticamente)
+docs/api/README.md

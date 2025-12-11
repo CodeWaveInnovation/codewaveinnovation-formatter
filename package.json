@@ -4,6 +4,7 @@
   "description": "Language-agnostic code formatter with configurable rules and plugin support",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "module": "",
   "bin": {
     "cwf": "dist/cli.js"
   },
@@ -13,7 +14,11 @@
     "test:coverage": "jest --coverage",
     "lint": "eslint src/**/*.ts",
     "prepare": "husky",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "npm run docs:api && vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "docs:api": "typedoc"
   },
   "keywords": [
     "formatter",
@@ -58,7 +63,10 @@
     "jest": "^30.2.0",
     "lint-staged": "^16.2.7",
     "ts-jest": "^29.4.6",
-    "typescript": "^5.9.3"
+    "typedoc": "^0.28.15",
+    "typedoc-plugin-markdown": "^4.9.0",
+    "typescript": "^5.9.3",
+    "vitepress": "^1.6.4"
   },
   "dependencies": {
     "chalk": "^5.6.2",

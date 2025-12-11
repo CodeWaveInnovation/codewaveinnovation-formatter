@@ -1,4 +1,9 @@
-# @codewaveinnovation/formatter
+<div align="center">
+  <img src="docs/public/banner.png" width="100%" style="max-width: 800px;" alt="CWF Banner">
+  <h1>@codewaveinnovation/formatter</h1>
+</div>
+
+<div align="center">
 
 [![npm version](https://img.shields.io/npm/v/@codewaveinnovation/formatter)](https://www.npmjs.com/package/@codewaveinnovation/formatter)
 [![npm downloads](https://img.shields.io/npm/dt/@codewaveinnovation/formatter)](https://www.npmjs.com/package/@codewaveinnovation/formatter)
@@ -6,7 +11,13 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)](https://nodejs.org)
 
-Language-agnostic code formatter with configurable rules and plugin support.
+**Language-agnostic code formatter with configurable rules and plugin support**
+
+[📚 Documentation](https://codewaveinnovation.github.io/codewaveinnovation-formatter/) • [🚀 Getting Started](https://codewaveinnovation.github.io/codewaveinnovation-formatter/guide/getting-started) • [🔌 Plugins](https://codewaveinnovation.github.io/codewaveinnovation-formatter/guide/plugins) • [📖 API Reference](https://codewaveinnovation.github.io/codewaveinnovation-formatter/api/)
+
+</div>
+
+---
 
 ## 🚀 Features
 

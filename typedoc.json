@@ -1,0 +1,22 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["./src/index.ts"],
+  "out": "./docs/api",
+  "plugin": ["typedoc-plugin-markdown"],
+  "outputFileStrategy": "modules",
+  "flattenOutputFiles": false,
+  "hideGenerator": true,
+  "readme": "none",
+  "excludePrivate": true,
+  "excludeProtected": false,
+  "excludeExternals": true,
+  "exclude": [
+    "**/*.test.ts",
+    "**/cli.ts"
+  ],
+  "githubPages": false,
+  "navigation": {
+    "includeCategories": false,
+    "includeGroups": false
+  }
+}
