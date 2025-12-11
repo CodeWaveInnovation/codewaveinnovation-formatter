@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/compare/v1.3.0...v1.3.1) (2025-12-11)
+
+
+### Bug Fixes
+
+* update API links in Vitepress config for accuracy ([980cbb2](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/commit/980cbb227fda10ae0feb443baa4a6935a492b61c))
+
 ## [1.3.0](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/compare/v1.2.0...v1.3.0) (2025-12-11)
 
 
