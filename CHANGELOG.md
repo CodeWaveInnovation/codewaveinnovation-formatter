@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/compare/v1.1.0...v1.2.0) (2025-12-11)
+
+
+### Features
+
+* add batch formatting with glob patterns and GitHub templates ([5e8968f](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/commit/5e8968f543b5fb93d0a43e6776dc4c52ec8169ea))
+
 ## [1.1.0](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/compare/v1.0.1...v1.1.0) (2025-12-11)
 
 
