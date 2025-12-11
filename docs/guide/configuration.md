@@ -320,4 +320,4 @@ const result = await formatter.format(code, config);
 ## Next Steps
 
 - [Learn about Rules](/guide/rules) - Detailed documentation for each rule
-- [API Reference](/api/) - Programmatic usage guide
+- [API Reference](./../api/README.md) - Programmatic usage guide

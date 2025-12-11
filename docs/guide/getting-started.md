@@ -118,4 +118,4 @@ console.log(result.appliedRules);  // ['trailing-whitespace', 'final-newline']
 
 - Learn about [Configuration](./configuration) options
 - Explore available [Rules](./rules)
-- Check the [API documentation](/api/)
+- Check the [API documentation](../api/README.md)

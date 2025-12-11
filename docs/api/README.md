@@ -8,7 +8,7 @@
 
 ### `abstract` BaseFormattingRule
 
-Defined in: [rules/BaseFormattingRule.ts:8](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/BaseFormattingRule.ts#L8)
+Defined in: [rules/BaseFormattingRule.ts:8](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/rules/BaseFormattingRule.ts#L8)
 
 Abstract base class for rules (Template Method Pattern)
 Reduces code duplication
@@ -41,7 +41,7 @@ Reduces code duplication
 
 > `abstract` `readonly` **description**: `string`
 
-Defined in: [rules/BaseFormattingRule.ts:10](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/BaseFormattingRule.ts#L10)
+Defined in: [rules/BaseFormattingRule.ts:10](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/rules/BaseFormattingRule.ts#L10)
 
 Description of what the rule does
 
@@ -53,7 +53,7 @@ Description of what the rule does
 
 > `abstract` `readonly` **name**: `string`
 
-Defined in: [rules/BaseFormattingRule.ts:9](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/BaseFormattingRule.ts#L9)
+Defined in: [rules/BaseFormattingRule.ts:9](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/rules/BaseFormattingRule.ts#L9)
 
 Unique name of the rule
 
@@ -67,7 +67,7 @@ Unique name of the rule
 
 > **apply**(`context`): [`FormatResult`](#formatresult)
 
-Defined in: [rules/BaseFormattingRule.ts:12](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/BaseFormattingRule.ts#L12)
+Defined in: [rules/BaseFormattingRule.ts:12](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/rules/BaseFormattingRule.ts#L12)
 
 Apply the formatting rule to the content
 
@@ -89,7 +89,7 @@ Apply the formatting rule to the content
 
 > `abstract` `protected` **format**(`context`): `string`
 
-Defined in: [rules/BaseFormattingRule.ts:23](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/BaseFormattingRule.ts#L23)
+Defined in: [rules/BaseFormattingRule.ts:23](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/rules/BaseFormattingRule.ts#L23)
 
 ###### Parameters
 
@@ -105,7 +105,7 @@ Defined in: [rules/BaseFormattingRule.ts:23](https://github.com/CodeWaveInnovati
 
 ### `abstract` BasePlugin
 
-Defined in: [plugins/BasePlugin.ts:8](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/plugins/BasePlugin.ts#L8)
+Defined in: [plugins/BasePlugin.ts:8](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/plugins/BasePlugin.ts#L8)
 
 Abstract base plugin class
 Follows Open/Closed Principle - plugins extend without modifying core
@@ -134,7 +134,7 @@ Follows Open/Closed Principle - plugins extend without modifying core
 
 > `abstract` `readonly` **name**: `string`
 
-Defined in: [plugins/BasePlugin.ts:9](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/plugins/BasePlugin.ts#L9)
+Defined in: [plugins/BasePlugin.ts:9](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/plugins/BasePlugin.ts#L9)
 
 Plugin name
 
@@ -146,7 +146,7 @@ Plugin name
 
 > `abstract` `readonly` **version**: `string`
 
-Defined in: [plugins/BasePlugin.ts:10](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/plugins/BasePlugin.ts#L10)
+Defined in: [plugins/BasePlugin.ts:10](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/plugins/BasePlugin.ts#L10)
 
 Plugin version
 
@@ -160,7 +160,7 @@ Plugin version
 
 > `abstract` **getRules**(): [`IFormattingRule`](#iformattingrule)[]
 
-Defined in: [plugins/BasePlugin.ts:12](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/plugins/BasePlugin.ts#L12)
+Defined in: [plugins/BasePlugin.ts:12](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/plugins/BasePlugin.ts#L12)
 
 Get the rules provided by this plugin
 
@@ -176,7 +176,7 @@ Get the rules provided by this plugin
 
 ### CodeFormatter
 
-Defined in: [formatters/CodeFormatter.ts:9](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/formatters/CodeFormatter.ts#L9)
+Defined in: [formatters/CodeFormatter.ts:9](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/formatters/CodeFormatter.ts#L9)
 
 Main formatter implementation (Dependency Inversion Principle)
 Depends on abstractions (IRuleRegistry) not concretions
@@ -191,7 +191,7 @@ Depends on abstractions (IRuleRegistry) not concretions
 
 > **new CodeFormatter**(`ruleRegistry`): [`CodeFormatter`](#codeformatter)
 
-Defined in: [formatters/CodeFormatter.ts:10](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/formatters/CodeFormatter.ts#L10)
+Defined in: [formatters/CodeFormatter.ts:10](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/formatters/CodeFormatter.ts#L10)
 
 ###### Parameters
 
@@ -209,7 +209,7 @@ Defined in: [formatters/CodeFormatter.ts:10](https://github.com/CodeWaveInnovati
 
 > **format**(`content`, `config?`): `Promise`\<[`FormatResult`](#formatresult)\>
 
-Defined in: [formatters/CodeFormatter.ts:12](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/formatters/CodeFormatter.ts#L12)
+Defined in: [formatters/CodeFormatter.ts:12](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/formatters/CodeFormatter.ts#L12)
 
 Format content according to the configured rules
 
@@ -235,7 +235,7 @@ Format content according to the configured rules
 
 ### CorePlugin
 
-Defined in: [plugins/CorePlugin.ts:14](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/plugins/CorePlugin.ts#L14)
+Defined in: [plugins/CorePlugin.ts:14](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/plugins/CorePlugin.ts#L14)
 
 Default plugin with core formatting rules
 
@@ -263,7 +263,7 @@ Default plugin with core formatting rules
 
 > `readonly` **name**: `"core"` = `'core'`
 
-Defined in: [plugins/CorePlugin.ts:15](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/plugins/CorePlugin.ts#L15)
+Defined in: [plugins/CorePlugin.ts:15](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/plugins/CorePlugin.ts#L15)
 
 Plugin name
 
@@ -275,7 +275,7 @@ Plugin name
 
 > `readonly` **version**: `"1.0.0"` = `'1.0.0'`
 
-Defined in: [plugins/CorePlugin.ts:16](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/plugins/CorePlugin.ts#L16)
+Defined in: [plugins/CorePlugin.ts:16](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/plugins/CorePlugin.ts#L16)
 
 Plugin version
 
@@ -289,7 +289,7 @@ Plugin version
 
 > **getRules**(): [`IFormattingRule`](#iformattingrule)[]
 
-Defined in: [plugins/CorePlugin.ts:18](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/plugins/CorePlugin.ts#L18)
+Defined in: [plugins/CorePlugin.ts:18](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/plugins/CorePlugin.ts#L18)
 
 Get the rules provided by this plugin
 
@@ -305,7 +305,7 @@ Get the rules provided by this plugin
 
 ### FinalNewlineRule
 
-Defined in: [rules/FinalNewlineRule.ts:7](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/FinalNewlineRule.ts#L7)
+Defined in: [rules/FinalNewlineRule.ts:7](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/rules/FinalNewlineRule.ts#L7)
 
 Rule to ensure final newline
 
@@ -333,7 +333,7 @@ Rule to ensure final newline
 
 > `readonly` **description**: `"Ensures file ends with a newline"` = `'Ensures file ends with a newline'`
 
-Defined in: [rules/FinalNewlineRule.ts:9](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/FinalNewlineRule.ts#L9)
+Defined in: [rules/FinalNewlineRule.ts:9](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/rules/FinalNewlineRule.ts#L9)
 
 Description of what the rule does
 
@@ -345,7 +345,7 @@ Description of what the rule does
 
 > `readonly` **name**: `"final-newline"` = `'final-newline'`
 
-Defined in: [rules/FinalNewlineRule.ts:8](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/FinalNewlineRule.ts#L8)
+Defined in: [rules/FinalNewlineRule.ts:8](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/rules/FinalNewlineRule.ts#L8)
 
 Unique name of the rule
 
@@ -359,7 +359,7 @@ Unique name of the rule
 
 > **apply**(`context`): [`FormatResult`](#formatresult)
 
-Defined in: [rules/BaseFormattingRule.ts:12](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/BaseFormattingRule.ts#L12)
+Defined in: [rules/BaseFormattingRule.ts:12](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/rules/BaseFormattingRule.ts#L12)
 
 Apply the formatting rule to the content
 
@@ -381,7 +381,7 @@ Apply the formatting rule to the content
 
 > `protected` **format**(`context`): `string`
 
-Defined in: [rules/FinalNewlineRule.ts:11](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/FinalNewlineRule.ts#L11)
+Defined in: [rules/FinalNewlineRule.ts:11](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/rules/FinalNewlineRule.ts#L11)
 
 ###### Parameters
 
@@ -401,7 +401,7 @@ Defined in: [rules/FinalNewlineRule.ts:11](https://github.com/CodeWaveInnovation
 
 ### IndentationRule
 
-Defined in: [rules/IndentationRule.ts:7](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/IndentationRule.ts#L7)
+Defined in: [rules/IndentationRule.ts:7](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/rules/IndentationRule.ts#L7)
 
 Rule to normalize indentation
 
@@ -429,7 +429,7 @@ Rule to normalize indentation
 
 > `readonly` **description**: `"Normalizes indentation to spaces or tabs"` = `"Normalizes indentation to spaces or tabs"`
 
-Defined in: [rules/IndentationRule.ts:9](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/IndentationRule.ts#L9)
+Defined in: [rules/IndentationRule.ts:9](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/rules/IndentationRule.ts#L9)
 
 Description of what the rule does
 
@@ -441,7 +441,7 @@ Description of what the rule does
 
 > `readonly` **name**: `"indentation"` = `"indentation"`
 
-Defined in: [rules/IndentationRule.ts:8](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/IndentationRule.ts#L8)
+Defined in: [rules/IndentationRule.ts:8](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/rules/IndentationRule.ts#L8)
 
 Unique name of the rule
 
@@ -455,7 +455,7 @@ Unique name of the rule
 
 > **apply**(`context`): [`FormatResult`](#formatresult)
 
-Defined in: [rules/BaseFormattingRule.ts:12](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/BaseFormattingRule.ts#L12)
+Defined in: [rules/BaseFormattingRule.ts:12](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/rules/BaseFormattingRule.ts#L12)
 
 Apply the formatting rule to the content
 
@@ -477,7 +477,7 @@ Apply the formatting rule to the content
 
 > `protected` **format**(`context`): `string`
 
-Defined in: [rules/IndentationRule.ts:11](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/IndentationRule.ts#L11)
+Defined in: [rules/IndentationRule.ts:11](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/rules/IndentationRule.ts#L11)
 
 ###### Parameters
 
@@ -497,7 +497,7 @@ Defined in: [rules/IndentationRule.ts:11](https://github.com/CodeWaveInnovation/
 
 ### LineEndingRule
 
-Defined in: [rules/LineEndingRule.ts:7](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/LineEndingRule.ts#L7)
+Defined in: [rules/LineEndingRule.ts:7](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/rules/LineEndingRule.ts#L7)
 
 Rule to normalize line endings
 
@@ -525,7 +525,7 @@ Rule to normalize line endings
 
 > `readonly` **description**: `"Normalizes line endings (LF, CRLF, or CR)"` = `'Normalizes line endings (LF, CRLF, or CR)'`
 
-Defined in: [rules/LineEndingRule.ts:9](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/LineEndingRule.ts#L9)
+Defined in: [rules/LineEndingRule.ts:9](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/rules/LineEndingRule.ts#L9)
 
 Description of what the rule does
 
@@ -537,7 +537,7 @@ Description of what the rule does
 
 > `readonly` **name**: `"line-ending"` = `'line-ending'`
 
-Defined in: [rules/LineEndingRule.ts:8](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/LineEndingRule.ts#L8)
+Defined in: [rules/LineEndingRule.ts:8](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/rules/LineEndingRule.ts#L8)
 
 Unique name of the rule
 
@@ -551,7 +551,7 @@ Unique name of the rule
 
 > **apply**(`context`): [`FormatResult`](#formatresult)
 
-Defined in: [rules/BaseFormattingRule.ts:12](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/BaseFormattingRule.ts#L12)
+Defined in: [rules/BaseFormattingRule.ts:12](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/rules/BaseFormattingRule.ts#L12)
 
 Apply the formatting rule to the content
 
@@ -573,7 +573,7 @@ Apply the formatting rule to the content
 
 > `protected` **format**(`context`): `string`
 
-Defined in: [rules/LineEndingRule.ts:11](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/LineEndingRule.ts#L11)
+Defined in: [rules/LineEndingRule.ts:11](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/rules/LineEndingRule.ts#L11)
 
 ###### Parameters
 
@@ -593,7 +593,7 @@ Defined in: [rules/LineEndingRule.ts:11](https://github.com/CodeWaveInnovation/c
 
 ### MaxLineLengthRule
 
-Defined in: [rules/MaxLineLengthRule.ts:7](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/MaxLineLengthRule.ts#L7)
+Defined in: [rules/MaxLineLengthRule.ts:7](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/rules/MaxLineLengthRule.ts#L7)
 
 Rule to normalize max line length
 
@@ -621,7 +621,7 @@ Rule to normalize max line length
 
 > `readonly` **description**: `"Warns or wraps lines exceeding maximum length"` = `"Warns or wraps lines exceeding maximum length"`
 
-Defined in: [rules/MaxLineLengthRule.ts:9](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/MaxLineLengthRule.ts#L9)
+Defined in: [rules/MaxLineLengthRule.ts:9](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/rules/MaxLineLengthRule.ts#L9)
 
 Description of what the rule does
 
@@ -633,7 +633,7 @@ Description of what the rule does
 
 > `readonly` **name**: `"max-line-length"` = `"max-line-length"`
 
-Defined in: [rules/MaxLineLengthRule.ts:8](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/MaxLineLengthRule.ts#L8)
+Defined in: [rules/MaxLineLengthRule.ts:8](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/rules/MaxLineLengthRule.ts#L8)
 
 Unique name of the rule
 
@@ -647,7 +647,7 @@ Unique name of the rule
 
 > **apply**(`context`): [`FormatResult`](#formatresult)
 
-Defined in: [rules/BaseFormattingRule.ts:12](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/BaseFormattingRule.ts#L12)
+Defined in: [rules/BaseFormattingRule.ts:12](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/rules/BaseFormattingRule.ts#L12)
 
 Apply the formatting rule to the content
 
@@ -669,7 +669,7 @@ Apply the formatting rule to the content
 
 > `protected` **format**(`context`): `string`
 
-Defined in: [rules/MaxLineLengthRule.ts:11](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/MaxLineLengthRule.ts#L11)
+Defined in: [rules/MaxLineLengthRule.ts:11](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/rules/MaxLineLengthRule.ts#L11)
 
 ###### Parameters
 
@@ -689,7 +689,7 @@ Defined in: [rules/MaxLineLengthRule.ts:11](https://github.com/CodeWaveInnovatio
 
 ### PluginManager
 
-Defined in: [plugins/PluginManager.ts:7](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/plugins/PluginManager.ts#L7)
+Defined in: [plugins/PluginManager.ts:7](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/plugins/PluginManager.ts#L7)
 
 Plugin manager to handle plugin loading and registration
 
@@ -699,7 +699,7 @@ Plugin manager to handle plugin loading and registration
 
 > **new PluginManager**(`ruleRegistry`): [`PluginManager`](#pluginmanager)
 
-Defined in: [plugins/PluginManager.ts:8](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/plugins/PluginManager.ts#L8)
+Defined in: [plugins/PluginManager.ts:8](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/plugins/PluginManager.ts#L8)
 
 ###### Parameters
 
@@ -717,7 +717,7 @@ Defined in: [plugins/PluginManager.ts:8](https://github.com/CodeWaveInnovation/c
 
 > **loadPlugin**(`plugin`): `void`
 
-Defined in: [plugins/PluginManager.ts:13](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/plugins/PluginManager.ts#L13)
+Defined in: [plugins/PluginManager.ts:13](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/plugins/PluginManager.ts#L13)
 
 Load and register a plugin
 
@@ -735,7 +735,7 @@ Load and register a plugin
 
 > **loadPlugins**(`plugins`): `void`
 
-Defined in: [plugins/PluginManager.ts:21](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/plugins/PluginManager.ts#L21)
+Defined in: [plugins/PluginManager.ts:21](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/plugins/PluginManager.ts#L21)
 
 Load multiple plugins
 
@@ -753,7 +753,7 @@ Load multiple plugins
 
 ### RuleRegistry
 
-Defined in: [formatters/RuleRegistry.ts:8](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/formatters/RuleRegistry.ts#L8)
+Defined in: [formatters/RuleRegistry.ts:8](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/formatters/RuleRegistry.ts#L8)
 
 Rule registry implementation (Single Responsibility Principle)
 Responsible only for managing the collection of rules
@@ -778,7 +778,7 @@ Responsible only for managing the collection of rules
 
 > **getAllRules**(): [`IFormattingRule`](#iformattingrule)[]
 
-Defined in: [formatters/RuleRegistry.ts:19](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/formatters/RuleRegistry.ts#L19)
+Defined in: [formatters/RuleRegistry.ts:19](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/formatters/RuleRegistry.ts#L19)
 
 Get all registered rules
 
@@ -794,7 +794,7 @@ Get all registered rules
 
 > **getRule**(`name`): [`IFormattingRule`](#iformattingrule) \| `undefined`
 
-Defined in: [formatters/RuleRegistry.ts:15](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/formatters/RuleRegistry.ts#L15)
+Defined in: [formatters/RuleRegistry.ts:15](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/formatters/RuleRegistry.ts#L15)
 
 Get a rule by name
 
@@ -816,7 +816,7 @@ Get a rule by name
 
 > **register**(`rule`): `void`
 
-Defined in: [formatters/RuleRegistry.ts:11](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/formatters/RuleRegistry.ts#L11)
+Defined in: [formatters/RuleRegistry.ts:11](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/formatters/RuleRegistry.ts#L11)
 
 Register a new rule
 
@@ -838,7 +838,7 @@ Register a new rule
 
 ### TrailingWhitespaceRule
 
-Defined in: [rules/TrailingWhitespaceRule.ts:7](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/TrailingWhitespaceRule.ts#L7)
+Defined in: [rules/TrailingWhitespaceRule.ts:7](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/rules/TrailingWhitespaceRule.ts#L7)
 
 Rule to trim trailing whitespace
 
@@ -866,7 +866,7 @@ Rule to trim trailing whitespace
 
 > `readonly` **description**: `"Removes trailing whitespace from lines"` = `'Removes trailing whitespace from lines'`
 
-Defined in: [rules/TrailingWhitespaceRule.ts:9](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/TrailingWhitespaceRule.ts#L9)
+Defined in: [rules/TrailingWhitespaceRule.ts:9](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/rules/TrailingWhitespaceRule.ts#L9)
 
 Description of what the rule does
 
@@ -878,7 +878,7 @@ Description of what the rule does
 
 > `readonly` **name**: `"trailing-whitespace"` = `'trailing-whitespace'`
 
-Defined in: [rules/TrailingWhitespaceRule.ts:8](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/TrailingWhitespaceRule.ts#L8)
+Defined in: [rules/TrailingWhitespaceRule.ts:8](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/rules/TrailingWhitespaceRule.ts#L8)
 
 Unique name of the rule
 
@@ -892,7 +892,7 @@ Unique name of the rule
 
 > **apply**(`context`): [`FormatResult`](#formatresult)
 
-Defined in: [rules/BaseFormattingRule.ts:12](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/BaseFormattingRule.ts#L12)
+Defined in: [rules/BaseFormattingRule.ts:12](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/rules/BaseFormattingRule.ts#L12)
 
 Apply the formatting rule to the content
 
@@ -914,7 +914,7 @@ Apply the formatting rule to the content
 
 > `protected` **format**(`context`): `string`
 
-Defined in: [rules/TrailingWhitespaceRule.ts:11](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/TrailingWhitespaceRule.ts#L11)
+Defined in: [rules/TrailingWhitespaceRule.ts:11](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/rules/TrailingWhitespaceRule.ts#L11)
 
 ###### Parameters
 
@@ -934,7 +934,7 @@ Defined in: [rules/TrailingWhitespaceRule.ts:11](https://github.com/CodeWaveInno
 
 ### FormatContext
 
-Defined in: [interfaces/types.ts:30](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/interfaces/types.ts#L30)
+Defined in: [interfaces/types.ts:30](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/interfaces/types.ts#L30)
 
 Context passed to rules during formatting
 
@@ -944,25 +944,25 @@ Context passed to rules during formatting
 
 > **config**: [`FormatterConfig`](#formatterconfig)
 
-Defined in: [interfaces/types.ts:32](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/interfaces/types.ts#L32)
+Defined in: [interfaces/types.ts:32](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/interfaces/types.ts#L32)
 
 ##### content
 
 > **content**: `string`
 
-Defined in: [interfaces/types.ts:31](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/interfaces/types.ts#L31)
+Defined in: [interfaces/types.ts:31](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/interfaces/types.ts#L31)
 
 ##### filePath?
 
 > `optional` **filePath**: `string`
 
-Defined in: [interfaces/types.ts:33](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/interfaces/types.ts#L33)
+Defined in: [interfaces/types.ts:33](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/interfaces/types.ts#L33)
 
 ***
 
 ### FormatResult
 
-Defined in: [interfaces/types.ts:4](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/interfaces/types.ts#L4)
+Defined in: [interfaces/types.ts:4](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/interfaces/types.ts#L4)
 
 Represents the result of a formatting operation
 
@@ -972,25 +972,25 @@ Represents the result of a formatting operation
 
 > **appliedRules**: `string`[]
 
-Defined in: [interfaces/types.ts:7](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/interfaces/types.ts#L7)
+Defined in: [interfaces/types.ts:7](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/interfaces/types.ts#L7)
 
 ##### changed
 
 > **changed**: `boolean`
 
-Defined in: [interfaces/types.ts:6](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/interfaces/types.ts#L6)
+Defined in: [interfaces/types.ts:6](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/interfaces/types.ts#L6)
 
 ##### content
 
 > **content**: `string`
 
-Defined in: [interfaces/types.ts:5](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/interfaces/types.ts#L5)
+Defined in: [interfaces/types.ts:5](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/interfaces/types.ts#L5)
 
 ***
 
 ### FormatterConfig
 
-Defined in: [interfaces/types.ts:22](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/interfaces/types.ts#L22)
+Defined in: [interfaces/types.ts:22](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/interfaces/types.ts#L22)
 
 Represents the formatter configuration
 
@@ -1000,19 +1000,19 @@ Represents the formatter configuration
 
 > `optional` **plugins**: `string`[]
 
-Defined in: [interfaces/types.ts:24](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/interfaces/types.ts#L24)
+Defined in: [interfaces/types.ts:24](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/interfaces/types.ts#L24)
 
 ##### rules
 
 > **rules**: [`RuleConfig`](#ruleconfig)[]
 
-Defined in: [interfaces/types.ts:23](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/interfaces/types.ts#L23)
+Defined in: [interfaces/types.ts:23](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/interfaces/types.ts#L23)
 
 ***
 
 ### IFormatter
 
-Defined in: [interfaces/IFormatter.ts:6](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/interfaces/IFormatter.ts#L6)
+Defined in: [interfaces/IFormatter.ts:6](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/interfaces/IFormatter.ts#L6)
 
 Interface for the main formatter (Dependency Inversion Principle)
 
@@ -1022,7 +1022,7 @@ Interface for the main formatter (Dependency Inversion Principle)
 
 > **format**(`content`, `config?`): `Promise`\<[`FormatResult`](#formatresult)\>
 
-Defined in: [interfaces/IFormatter.ts:10](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/interfaces/IFormatter.ts#L10)
+Defined in: [interfaces/IFormatter.ts:10](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/interfaces/IFormatter.ts#L10)
 
 Format content according to the configured rules
 
@@ -1044,7 +1044,7 @@ Format content according to the configured rules
 
 ### IFormattingRule
 
-Defined in: [interfaces/IFormattingRule.ts:6](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/interfaces/IFormattingRule.ts#L6)
+Defined in: [interfaces/IFormattingRule.ts:6](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/interfaces/IFormattingRule.ts#L6)
 
 Interface for formatting rules (Interface Segregation Principle)
 
@@ -1054,7 +1054,7 @@ Interface for formatting rules (Interface Segregation Principle)
 
 > `readonly` **description**: `string`
 
-Defined in: [interfaces/IFormattingRule.ts:15](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/interfaces/IFormattingRule.ts#L15)
+Defined in: [interfaces/IFormattingRule.ts:15](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/interfaces/IFormattingRule.ts#L15)
 
 Description of what the rule does
 
@@ -1062,7 +1062,7 @@ Description of what the rule does
 
 > `readonly` **name**: `string`
 
-Defined in: [interfaces/IFormattingRule.ts:10](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/interfaces/IFormattingRule.ts#L10)
+Defined in: [interfaces/IFormattingRule.ts:10](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/interfaces/IFormattingRule.ts#L10)
 
 Unique name of the rule
 
@@ -1072,7 +1072,7 @@ Unique name of the rule
 
 > **apply**(`context`): [`FormatResult`](#formatresult)
 
-Defined in: [interfaces/IFormattingRule.ts:20](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/interfaces/IFormattingRule.ts#L20)
+Defined in: [interfaces/IFormattingRule.ts:20](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/interfaces/IFormattingRule.ts#L20)
 
 Apply the formatting rule to the content
 
@@ -1090,7 +1090,7 @@ Apply the formatting rule to the content
 
 ### IPlugin
 
-Defined in: [interfaces/IPlugin.ts:6](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/interfaces/IPlugin.ts#L6)
+Defined in: [interfaces/IPlugin.ts:6](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/interfaces/IPlugin.ts#L6)
 
 Interface for plugin system (Open/Closed Principle)
 
@@ -1100,7 +1100,7 @@ Interface for plugin system (Open/Closed Principle)
 
 > `readonly` **name**: `string`
 
-Defined in: [interfaces/IPlugin.ts:10](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/interfaces/IPlugin.ts#L10)
+Defined in: [interfaces/IPlugin.ts:10](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/interfaces/IPlugin.ts#L10)
 
 Plugin name
 
@@ -1108,7 +1108,7 @@ Plugin name
 
 > `readonly` **version**: `string`
 
-Defined in: [interfaces/IPlugin.ts:15](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/interfaces/IPlugin.ts#L15)
+Defined in: [interfaces/IPlugin.ts:15](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/interfaces/IPlugin.ts#L15)
 
 Plugin version
 
@@ -1118,7 +1118,7 @@ Plugin version
 
 > **getRules**(): [`IFormattingRule`](#iformattingrule)[]
 
-Defined in: [interfaces/IPlugin.ts:20](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/interfaces/IPlugin.ts#L20)
+Defined in: [interfaces/IPlugin.ts:20](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/interfaces/IPlugin.ts#L20)
 
 Get the rules provided by this plugin
 
@@ -1130,7 +1130,7 @@ Get the rules provided by this plugin
 
 ### IRuleRegistry
 
-Defined in: [interfaces/IRuleRegistry.ts:6](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/interfaces/IRuleRegistry.ts#L6)
+Defined in: [interfaces/IRuleRegistry.ts:6](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/interfaces/IRuleRegistry.ts#L6)
 
 Interface for rule registry (Single Responsibility Principle)
 
@@ -1140,7 +1140,7 @@ Interface for rule registry (Single Responsibility Principle)
 
 > **getAllRules**(): [`IFormattingRule`](#iformattingrule)[]
 
-Defined in: [interfaces/IRuleRegistry.ts:20](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/interfaces/IRuleRegistry.ts#L20)
+Defined in: [interfaces/IRuleRegistry.ts:20](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/interfaces/IRuleRegistry.ts#L20)
 
 Get all registered rules
 
@@ -1152,7 +1152,7 @@ Get all registered rules
 
 > **getRule**(`name`): [`IFormattingRule`](#iformattingrule) \| `undefined`
 
-Defined in: [interfaces/IRuleRegistry.ts:15](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/interfaces/IRuleRegistry.ts#L15)
+Defined in: [interfaces/IRuleRegistry.ts:15](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/interfaces/IRuleRegistry.ts#L15)
 
 Get a rule by name
 
@@ -1170,7 +1170,7 @@ Get a rule by name
 
 > **register**(`rule`): `void`
 
-Defined in: [interfaces/IRuleRegistry.ts:10](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/interfaces/IRuleRegistry.ts#L10)
+Defined in: [interfaces/IRuleRegistry.ts:10](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/interfaces/IRuleRegistry.ts#L10)
 
 Register a new rule
 
@@ -1188,7 +1188,7 @@ Register a new rule
 
 ### RuleConfig
 
-Defined in: [interfaces/types.ts:13](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/interfaces/types.ts#L13)
+Defined in: [interfaces/types.ts:13](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/interfaces/types.ts#L13)
 
 Represents a formatting rule configuration
 
@@ -1198,19 +1198,19 @@ Represents a formatting rule configuration
 
 > **enabled**: `boolean`
 
-Defined in: [interfaces/types.ts:15](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/interfaces/types.ts#L15)
+Defined in: [interfaces/types.ts:15](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/interfaces/types.ts#L15)
 
 ##### name
 
 > **name**: `string`
 
-Defined in: [interfaces/types.ts:14](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/interfaces/types.ts#L14)
+Defined in: [interfaces/types.ts:14](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/interfaces/types.ts#L14)
 
 ##### options?
 
 > `optional` **options**: `Record`\<`string`, `unknown`\>
 
-Defined in: [interfaces/types.ts:16](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/interfaces/types.ts#L16)
+Defined in: [interfaces/types.ts:16](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/interfaces/types.ts#L16)
 
 ## Functions
 
@@ -1218,7 +1218,7 @@ Defined in: [interfaces/types.ts:16](https://github.com/CodeWaveInnovation/codew
 
 > **createFormatter**(): [`CodeFormatter`](#codeformatter)
 
-Defined in: [index.ts:24](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/index.ts#L24)
+Defined in: [index.ts:24](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/index.ts#L24)
 
 Create a formatter instance with core rules loaded
 
@@ -1232,7 +1232,7 @@ Create a formatter instance with core rules loaded
 
 > **getDefaultConfig**(): [`FormatterConfig`](#formatterconfig)
 
-Defined in: [index.ts:37](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/index.ts#L37)
+Defined in: [index.ts:37](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/315889f9617f3c56c59585973ac2f24fda0efa4c/src/index.ts#L37)
 
 Default configuration
 

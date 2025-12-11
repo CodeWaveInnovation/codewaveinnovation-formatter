@@ -419,7 +419,7 @@ Central registry for all formatting rules.
 
 - [Rules Guide](/guide/rules) - Learn about built-in rules
 - [Configuration](/guide/configuration) - Configure your formatter
-- [API Reference](/api/) - Full API documentation
+- [API Reference](../api/README.md) - Full API documentation
 
 ## Need Help?
 
