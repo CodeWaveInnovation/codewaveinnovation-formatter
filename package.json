@@ -24,6 +24,17 @@
   ],
   "author": "CodeWave Innovation",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeWaveInnovation/codewaveinnovation-formatter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/issues"
+  },
+  "homepage": "https://github.com/CodeWaveInnovation/codewaveinnovation-formatter#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "files": [
     "dist",
     "README.md",
