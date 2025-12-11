@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.3](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/compare/v1.4.2...v1.4.3) (2025-12-11)
+
+
+### Bug Fixes
+
+* correct API link case sensitivity in documentation ([9b27ea7](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/commit/9b27ea73a3c465603a4e0678ecc63f98f9766d91))
+
 ## [1.4.2](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/compare/v1.4.1...v1.4.2) (2025-12-11)
 
 
