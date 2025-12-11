@@ -71,7 +71,7 @@ export default defineConfig({
         logo: "/logo.svg",
         nav: [
           { text: "Guide", link: "/guide/getting-started" },
-          { text: "API", link: "/api/" },
+          { text: "API", link: "/api/readme" },
           {
             text: "GitHub",
             link: "https://github.com/CodeWaveInnovation/codewaveinnovation-formatter",
@@ -114,7 +114,7 @@ export default defineConfig({
         logo: "/logo.svg",
         nav: [
           { text: "Guía", link: "/es/guide/getting-started" },
-          { text: "API", link: "/es/api/" },
+          { text: "API", link: "/es/api/index" },
           {
             text: "GitHub",
             link: "https://github.com/CodeWaveInnovation/codewaveinnovation-formatter",
