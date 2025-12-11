@@ -117,6 +117,7 @@ const result = await formatter.format(code, customConfig);
 Normalizes indentation to spaces or tabs.
 
 **Options:**
+
 - `style`: `'space'` | `'tab'` (default: `'space'`)
 - `size`: number of spaces per level (default: `2`)
 
@@ -125,6 +126,7 @@ Normalizes indentation to spaces or tabs.
 Normalizes line endings.
 
 **Options:**
+
 - `style`: `'lf'` | `'crlf'` | `'cr'` (default: `'lf'`)
 
 ### `trailing-whitespace`
@@ -136,6 +138,7 @@ Removes trailing whitespace at the end of lines.
 Ensures the file ends with a newline.
 
 **Options:**
+
 - `insert`: `boolean` (default: `true`)
 
 ### `max-line-length`
@@ -143,6 +146,7 @@ Ensures the file ends with a newline.
 Controls the maximum length of lines.
 
 **Options:**
+
 - `length`: number of characters (default: `80`)
 - `action`: `'warn'` | `'wrap'` (default: `'warn'`)
 
