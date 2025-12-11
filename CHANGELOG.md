@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.0](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/compare/v1.2.0...v1.3.0) (2025-12-11)
+
+
+### Features
+
+* add documentation generation with Typedoc and Vitepress ([d30276a](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/commit/d30276a1ffb0b7311ed7a676a6795088a1138144))
+* update documentation and remove obsolete API reference ([e22e8d0](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/commit/e22e8d004174e5aee803831cab25697c0b64326b))
+
 ## [1.2.0](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/compare/v1.1.0...v1.2.0) (2025-12-11)
 
 
