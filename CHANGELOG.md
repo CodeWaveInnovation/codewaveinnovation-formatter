@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/compare/v1.0.1...v1.1.0) (2025-12-11)
+
+
+### Features
+
+* add automatic config file discovery for CLI commands ([a8de66b](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/commit/a8de66b60c06e36134400ed65ca859cabfeb2407))
+
 ## [1.0.1](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/compare/v1.0.0...v1.0.1) (2025-12-11)
 
 
