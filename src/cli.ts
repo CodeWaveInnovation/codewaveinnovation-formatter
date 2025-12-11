@@ -5,6 +5,7 @@ import inquirer from "inquirer";
 import chalk from "chalk";
 import * as fs from "fs";
 import * as path from "path";
+import fg from "fast-glob";
 import { createFormatter, getDefaultConfig, FormatterConfig } from "./index";
 
 const program = new Command();
@@ -51,11 +52,11 @@ program
   .version("1.0.0");
 
 program
-  .command("format <file>")
-  .description("Format a file")
+  .command("format <files...>")
+  .description("Format file(s) - supports glob patterns")
   .option("-c, --config <path>", "Path to configuration file")
   .option("-i, --interactive", "Use interactive mode to configure rules")
-  .action(async (file: string, options) => {
+  .action(async (files: string[], options) => {
     try {
       let config = getDefaultConfig();
 
@@ -82,29 +83,48 @@ program
         config = await interactiveConfig(config);
       }
 
-      // Read file
-      const filePath = path.resolve(file);
-      if (!fs.existsSync(filePath)) {
-        console.error(chalk.red(`File not found: ${filePath}`));
+      // Expand glob patterns
+      const expandedFiles = await fg(files, {
+        dot: false,
+        onlyFiles: true,
+        ignore: ["node_modules/**", "dist/**", ".git/**"],
+      });
+
+      if (expandedFiles.length === 0) {
+        console.error(chalk.yellow("No files found matching the pattern"));
         process.exit(1);
       }
 
-      const content = fs.readFileSync(filePath, "utf-8");
-
-      // Format
       const formatter = createFormatter();
-      const result = await formatter.format(content, config);
+      let formattedCount = 0;
+      let unchangedCount = 0;
 
-      if (result.changed) {
-        // Write back
-        fs.writeFileSync(filePath, result.content, "utf-8");
-        console.log(chalk.green(`✓ Formatted ${file}`));
-        console.log(
-          chalk.gray(`Applied rules: ${result.appliedRules.join(", ")}`)
-        );
-      } else {
-        console.log(chalk.blue(`✓ ${file} is already formatted`));
+      for (const filePath of expandedFiles) {
+        const absolutePath = path.resolve(filePath);
+
+        if (!fs.existsSync(absolutePath)) {
+          console.warn(chalk.yellow(`File not found: ${filePath}`));
+          continue;
+        }
+
+        const content = fs.readFileSync(absolutePath, "utf-8");
+        const result = await formatter.format(content, config);
+
+        if (result.changed) {
+          fs.writeFileSync(absolutePath, result.content, "utf-8");
+          console.log(chalk.green(`✓ Formatted ${filePath}`));
+          formattedCount++;
+        } else {
+          unchangedCount++;
+        }
       }
+
+      // Summary
+      console.log(
+        chalk.cyan(
+          `\n${formattedCount} file(s) formatted, ${unchangedCount} file(s) unchanged`
+        )
+      );
     } catch (error) {
       console.error(chalk.red(`Error: ${error}`));
       process.exit(1);

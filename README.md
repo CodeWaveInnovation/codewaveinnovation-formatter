@@ -33,10 +33,20 @@ npm install -g @codewaveinnovation/formatter
 
 ### CLI
 
-#### Format a file
+#### Format files
+
+Format a single file:
 
 ```bash
 cwf format file.txt
+```
+
+Format multiple files with glob patterns:
+
+```bash
+cwf format "src/**/*.ts"        # All TypeScript files in src/
+cwf format "*.js" "*.ts"        # All JS and TS files in current dir
+cwf format src/ test/           # All files in src/ and test/ directories
 ```
 
 #### Interactive mode
