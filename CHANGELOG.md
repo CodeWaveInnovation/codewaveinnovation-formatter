@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.2](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/compare/v1.4.1...v1.4.2) (2025-12-11)
+
+
+### Bug Fixes
+
+* simplify build command by removing redundant API documentation step ([83de5c2](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/commit/83de5c2f5e793cf7a5c67dcd4b09bf3a6f46fc08))
+
 ## [1.4.1](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/compare/v1.4.0...v1.4.1) (2025-12-11)
 
 
