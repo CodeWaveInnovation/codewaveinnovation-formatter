@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/compare/v1.4.0...v1.4.1) (2025-12-11)
+
+
+### Bug Fixes
+
+* update API reference links to point to README.md ([212d79c](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/commit/212d79c826e13d3589f18f64b02e9debc4230648))
+
 ## [1.4.0](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/compare/v1.3.1...v1.4.0) (2025-12-11)
 
 
