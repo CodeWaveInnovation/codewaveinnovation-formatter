@@ -3,80 +3,80 @@
 [![npm version](https://badge.fury.io/js/@codewaveinnovation%2Fformatter.svg)](https://www.npmjs.com/package/@codewaveinnovation/formatter)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Formateador de código agnóstico al lenguaje con reglas configurables y soporte para plugins.
+Language-agnostic code formatter with configurable rules and plugin support.
 
-## 🚀 Características
+## 🚀 Features
 
-- **Agnóstico al lenguaje**: Funciona con cualquier tipo de archivo de texto
-- **Arquitectura SOLID**: Diseño modular y extensible
-- **Sistema de plugins**: Extiende funcionalidad sin modificar el código base
-- **CLI interactiva**: Interfaz de línea de comandos con modo interactivo
-- **Reglas configurables**: Personaliza el formateo según tus necesidades
-- **Alta cobertura de pruebas**: Más del 80% de cobertura de código
+- **Language-agnostic**: Works with any kind of text file
+- **SOLID architecture**: Modular and extensible design
+- **Plugin system**: Extend functionality without changing the core code
+- **Interactive CLI**: Command-line interface with interactive mode
+- **Configurable rules**: Customize formatting to fit your needs
+- **High test coverage**: Over 80% code coverage
 
-## 📦 Instalación
+## 📦 Installation
 
 ```bash
 npm install @codewaveinnovation/formatter
 ```
 
-Para uso global del CLI:
+For global CLI usage:
 
 ```bash
 npm install -g @codewaveinnovation/formatter
 ```
 
-## 🎯 Uso
+## 🎯 Usage
 
 ### CLI
 
-#### Formatear un archivo
+#### Format a file
 
 ```bash
-cwf format archivo.txt
+cwf format file.txt
 ```
 
-#### Modo interactivo
+#### Interactive mode
 
 ```bash
-cwf format archivo.txt --interactive
+cwf format file.txt --interactive
 ```
 
-#### Usar archivo de configuración
+#### Use a configuration file
 
 ```bash
-cwf format archivo.txt --config .cwfrc.json
+cwf format file.txt --config .cwfrc.json
 ```
 
-#### Verificar formato sin modificar
+#### Check formatting without modifying
 
 ```bash
-cwf check archivo.txt
+cwf check file.txt
 ```
 
-#### Crear archivo de configuración por defecto
+#### Create a default configuration file
 
 ```bash
 cwf init
 ```
 
-### API Programática
+### Programmatic API
 
 ```typescript
 import { createFormatter, getDefaultConfig } from '@codewaveinnovation/formatter';
 
-// Crear formateador con reglas por defecto
+// Create a formatter with default rules
 const formatter = createFormatter();
 const config = getDefaultConfig();
 
-// Formatear contenido
+// Format content
 const result = await formatter.format('  hello world  ', config);
 console.log(result.content); // 'hello world\n'
 console.log(result.changed); // true
 console.log(result.appliedRules); // ['trailing-whitespace', 'final-newline']
 ```
 
-### Configuración personalizada
+### Custom configuration
 
 ```typescript
 import { createFormatter, FormatterConfig } from '@codewaveinnovation/formatter';
@@ -110,45 +110,45 @@ const customConfig: FormatterConfig = {
 const result = await formatter.format(code, customConfig);
 ```
 
-## 📋 Reglas disponibles
+## 📋 Available Rules
 
 ### `indentation`
 
-Normaliza la indentación a espacios o tabulaciones.
+Normalizes indentation to spaces or tabs.
 
-**Opciones:**
+**Options:**
 - `style`: `'space'` | `'tab'` (default: `'space'`)
-- `size`: número de espacios por nivel (default: `2`)
+- `size`: number of spaces per level (default: `2`)
 
 ### `line-ending`
 
-Normaliza los finales de línea.
+Normalizes line endings.
 
-**Opciones:**
+**Options:**
 - `style`: `'lf'` | `'crlf'` | `'cr'` (default: `'lf'`)
 
 ### `trailing-whitespace`
 
-Elimina espacios en blanco al final de las líneas.
+Removes trailing whitespace at the end of lines.
 
 ### `final-newline`
 
-Asegura que el archivo termine con una nueva línea.
+Ensures the file ends with a newline.
 
-**Opciones:**
+**Options:**
 - `insert`: `boolean` (default: `true`)
 
 ### `max-line-length`
 
-Controla la longitud máxima de las líneas.
+Controls the maximum length of lines.
 
-**Opciones:**
-- `length`: número de caracteres (default: `80`)
+**Options:**
+- `length`: number of characters (default: `80`)
 - `action`: `'warn'` | `'wrap'` (default: `'warn'`)
 
-## 🔌 Sistema de Plugins
+## 🔌 Plugin System
 
-Crea tu propio plugin para extender la funcionalidad:
+Create your own plugin to extend functionality:
 
 ```typescript
 import { BasePlugin, IFormattingRule } from '@codewaveinnovation/formatter';
@@ -164,7 +164,7 @@ export class MyPlugin extends BasePlugin {
 }
 ```
 
-Cargar el plugin:
+Load the plugin:
 
 ```typescript
 import { RuleRegistry, PluginManager, CodeFormatter } from '@codewaveinnovation/formatter';
@@ -179,57 +179,57 @@ pluginManager.loadPlugin(myPlugin);
 const formatter = new CodeFormatter(registry);
 ```
 
-## 🏗️ Arquitectura SOLID
+## 🏗️ SOLID Architecture
 
-El proyecto sigue los principios SOLID:
+The project follows the SOLID principles:
 
-- **S**ingle Responsibility: Cada clase tiene una única responsabilidad
-- **O**pen/Closed: Abierto para extensión (plugins), cerrado para modificación
-- **L**iskov Substitution: Las implementaciones pueden sustituirse por sus interfaces
-- **I**nterface Segregation: Interfaces específicas en lugar de generales
-- **D**ependency Inversion: Dependencias en abstracciones, no en concreciones
+- **S**ingle Responsibility: Each class has a single responsibility
+- **O**pen/Closed: Open for extension (plugins), closed for modification
+- **L**iskov Substitution: Implementations can be substituted by their interfaces
+- **I**nterface Segregation: Specific interfaces instead of general ones
+- **D**ependency Inversion: Depend on abstractions, not concretions
 
-## 🧪 Pruebas
+## 🧪 Tests
 
-Ejecutar pruebas:
+Run tests:
 
 ```bash
 npm test
 ```
 
-Ver cobertura:
+View coverage:
 
 ```bash
 npm run test:coverage
 ```
 
-## 🛠️ Desarrollo
+## 🛠️ Development
 
 ```bash
-# Instalar dependencias
+# Install dependencies
 npm install
 
-# Compilar
+# Build
 npm run build
 
-# Ejecutar linter
+# Run linter
 npm run lint
 
-# Ejecutar pruebas
+# Run tests
 npm test
 ```
 
-## 📄 Licencia
+## 📄 License
 
 MIT © CodeWave Innovation
 
-## 🤝 Contribuir
+## 🤝 Contributing
 
-Las contribuciones son bienvenidas. Por favor, abre un issue o pull request para sugerencias o mejoras.
+Contributions are welcome. Please open an issue or pull request for suggestions or improvements.
 
-## 📚 Documentación adicional
+## 📚 Additional documentation
 
-### Archivo de configuración (.cwfrc.json)
+### Configuration file (.cwfrc.json)
 
 ```json
 {
