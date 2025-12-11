@@ -4,6 +4,7 @@ export default defineConfig({
   title: "CWF",
   description: "Language-agnostic code formatter with configurable rules",
   base: "/codewaveinnovation-formatter/",
+  ignoreDeadLinks: true,
 
   head: [
     [

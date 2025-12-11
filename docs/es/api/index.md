@@ -406,7 +406,7 @@ try {
 
 ## Referencia Completa de TypeDoc
 
-Para documentación completa de la API incluyendo todos los tipos internos y detalles de implementación, consulta la [referencia TypeDoc autogenerada](./README).
+Para documentación completa de la API incluyendo todos los tipos internos y detalles de implementación, consulta la referencia TypeDoc autogenerada en el repositorio.
 
 ## Ver También
 

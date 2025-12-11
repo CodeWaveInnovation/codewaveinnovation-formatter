@@ -468,4 +468,5 @@ export class QuoteStyleRule extends BaseFormattingRule {
 
 - [Configuration Guide](/guide/configuration) - Learn how to configure rules
 - [API Reference](/api/) - Programmatic usage
-- [Examples](/examples) - Real-world configuration examples
+- [Getting Started](/guide/getting-started) - Quick start guide
+- [Plugins](/guide/plugins) - Create custom rules with plugins
