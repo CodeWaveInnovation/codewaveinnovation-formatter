@@ -51,6 +51,21 @@ cwf format file.txt --interactive
 cwf format file.txt --config .cwfrc.json
 ```
 
+#### Auto-discovery of configuration
+
+The CLI automatically searches for configuration files in the current directory:
+
+```bash
+cwf format file.txt
+# Looks for .cwfrc.json, .cwfrc, or package.json (formatter key)
+```
+
+Supported config locations (in order of priority):
+
+- `.cwfrc.json`
+- `.cwfrc`
+- `package.json` under `"formatter"` key
+
 #### Check formatting without modifying
 
 ```bash

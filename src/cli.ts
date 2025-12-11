@@ -1,24 +1,60 @@
 #!/usr/bin/env node
 
-import { Command } from 'commander';
-import inquirer from 'inquirer';
-import chalk from 'chalk';
-import * as fs from 'fs';
-import * as path from 'path';
-import { createFormatter, getDefaultConfig, FormatterConfig } from './index';
+import { Command } from "commander";
+import inquirer from "inquirer";
+import chalk from "chalk";
+import * as fs from "fs";
+import * as path from "path";
+import { createFormatter, getDefaultConfig, FormatterConfig } from "./index";
 
 const program = new Command();
 
-program
-  .name('cwf')
-  .description('CodeWave Innovation Formatter - Language-agnostic code formatter')
-  .version('1.0.0');
+/**
+ * Find configuration file in current directory
+ */
+function findConfig(): FormatterConfig | null {
+  const configFiles = [".cwfrc.json", ".cwfrc"];
+
+  for (const file of configFiles) {
+    const configPath = path.resolve(process.cwd(), file);
+    if (fs.existsSync(configPath)) {
+      try {
+        const configContent = fs.readFileSync(configPath, "utf-8");
+        return JSON.parse(configContent);
+      } catch (error) {
+        console.warn(chalk.yellow(`Warning: Failed to parse ${file}`));
+      }
+    }
+  }
+
+  // Check package.json
+  const pkgPath = path.resolve(process.cwd(), "package.json");
+  if (fs.existsSync(pkgPath)) {
+    try {
+      const pkg = JSON.parse(fs.readFileSync(pkgPath, "utf-8"));
+      if (pkg.formatter) {
+        return pkg.formatter;
+      }
+    } catch (error) {
+      // Ignore package.json parsing errors
+    }
+  }
+
+  return null;
+}
 
 program
-  .command('format <file>')
-  .description('Format a file')
-  .option('-c, --config <path>', 'Path to configuration file')
-  .option('-i, --interactive', 'Use interactive mode to configure rules')
+  .name("cwf")
+  .description(
+    "CodeWave Innovation Formatter - Language-agnostic code formatter"
+  )
+  .version("1.0.0");
+
+program
+  .command("format <file>")
+  .description("Format a file")
+  .option("-c, --config <path>", "Path to configuration file")
+  .option("-i, --interactive", "Use interactive mode to configure rules")
   .action(async (file: string, options) => {
     try {
       let config = getDefaultConfig();
@@ -27,11 +63,17 @@ program
       if (options.config) {
         const configPath = path.resolve(options.config);
         if (fs.existsSync(configPath)) {
-          const configContent = fs.readFileSync(configPath, 'utf-8');
+          const configContent = fs.readFileSync(configPath, "utf-8");
           config = JSON.parse(configContent);
         } else {
           console.error(chalk.red(`Config file not found: ${configPath}`));
           process.exit(1);
+        }
+      } else {
+        // Auto-discover config file
+        const foundConfig = findConfig();
+        if (foundConfig) {
+          config = foundConfig;
         }
       }
 
@@ -47,17 +89,19 @@ program
         process.exit(1);
       }
 
-      const content = fs.readFileSync(filePath, 'utf-8');
-      
+      const content = fs.readFileSync(filePath, "utf-8");
+
       // Format
       const formatter = createFormatter();
       const result = await formatter.format(content, config);
 
       if (result.changed) {
         // Write back
-        fs.writeFileSync(filePath, result.content, 'utf-8');
+        fs.writeFileSync(filePath, result.content, "utf-8");
         console.log(chalk.green(`✓ Formatted ${file}`));
-        console.log(chalk.gray(`Applied rules: ${result.appliedRules.join(', ')}`));
+        console.log(
+          chalk.gray(`Applied rules: ${result.appliedRules.join(", ")}`)
+        );
       } else {
         console.log(chalk.blue(`✓ ${file} is already formatted`));
       }
@@ -68,9 +112,9 @@ program
   });
 
 program
-  .command('check <file>')
-  .description('Check if a file is formatted')
-  .option('-c, --config <path>', 'Path to configuration file')
+  .command("check <file>")
+  .description("Check if a file is formatted")
+  .option("-c, --config <path>", "Path to configuration file")
   .action(async (file: string, options) => {
     try {
       let config = getDefaultConfig();
@@ -78,8 +122,14 @@ program
       if (options.config) {
         const configPath = path.resolve(options.config);
         if (fs.existsSync(configPath)) {
-          const configContent = fs.readFileSync(configPath, 'utf-8');
+          const configContent = fs.readFileSync(configPath, "utf-8");
           config = JSON.parse(configContent);
+        }
+      } else {
+        // Auto-discover config file
+        const foundConfig = findConfig();
+        if (foundConfig) {
+          config = foundConfig;
         }
       }
 
@@ -89,7 +139,7 @@ program
         process.exit(1);
       }
 
-      const content = fs.readFileSync(filePath, 'utf-8');
+      const content = fs.readFileSync(filePath, "utf-8");
       const formatter = createFormatter();
       const result = await formatter.format(content, config);
 
@@ -106,79 +156,81 @@ program
   });
 
 program
-  .command('init')
-  .description('Create a default configuration file')
+  .command("init")
+  .description("Create a default configuration file")
   .action(async () => {
     const config = getDefaultConfig();
-    const configPath = path.resolve('.cwfrc.json');
+    const configPath = path.resolve(".cwfrc.json");
 
     if (fs.existsSync(configPath)) {
       const { overwrite } = await inquirer.prompt([
         {
-          type: 'confirm',
-          name: 'overwrite',
-          message: 'Configuration file already exists. Overwrite?',
+          type: "confirm",
+          name: "overwrite",
+          message: "Configuration file already exists. Overwrite?",
           default: false,
         },
       ]);
 
       if (!overwrite) {
-        console.log(chalk.blue('Configuration not created.'));
+        console.log(chalk.blue("Configuration not created."));
         return;
       }
     }
 
-    fs.writeFileSync(configPath, JSON.stringify(config, null, 2), 'utf-8');
+    fs.writeFileSync(configPath, JSON.stringify(config, null, 2), "utf-8");
     console.log(chalk.green(`✓ Created configuration file: ${configPath}`));
   });
 
-async function interactiveConfig(baseConfig: FormatterConfig): Promise<FormatterConfig> {
-  console.log(chalk.cyan('\n🔧 Interactive Configuration\n'));
+async function interactiveConfig(
+  baseConfig: FormatterConfig
+): Promise<FormatterConfig> {
+  console.log(chalk.cyan("\n🔧 Interactive Configuration\n"));
 
   const answers = await inquirer.prompt([
     {
-      type: 'list',
-      name: 'indentStyle',
-      message: 'Indentation style:',
-      choices: ['space', 'tab'],
-      default: 'space',
+      type: "list",
+      name: "indentStyle",
+      message: "Indentation style:",
+      choices: ["space", "tab"],
+      default: "space",
     },
     {
-      type: 'number',
-      name: 'indentSize',
-      message: 'Indentation size (spaces):',
+      type: "number",
+      name: "indentSize",
+      message: "Indentation size (spaces):",
       default: 2,
-      when: (answers) => answers.indentStyle === 'space',
+      when: (answers) => answers.indentStyle === "space",
     },
     {
-      type: 'list',
-      name: 'lineEnding',
-      message: 'Line ending style:',
-      choices: ['lf', 'crlf', 'cr'],
-      default: 'lf',
+      type: "list",
+      name: "lineEnding",
+      message: "Line ending style:",
+      choices: ["lf", "crlf", "cr"],
+      default: "lf",
     },
     {
-      type: 'confirm',
-      name: 'trailingWhitespace',
-      message: 'Remove trailing whitespace?',
+      type: "confirm",
+      name: "trailingWhitespace",
+      message: "Remove trailing whitespace?",
       default: true,
     },
     {
-      type: 'confirm',
-      name: 'finalNewline',
-      message: 'Insert final newline?',
+      type: "confirm",
+      name: "finalNewline",
+      message: "Insert final newline?",
       default: true,
     },
     {
-      type: 'confirm',
-      name: 'maxLineLength',
-      message: 'Enable max line length check?',
+      type: "confirm",
+      name: "maxLineLength",
+      message: "Enable max line length check?",
       default: false,
     },
     {
-      type: 'number',
-      name: 'maxLineLengthValue',
-      message: 'Max line length:',
+      type: "number",
+      name: "maxLineLengthValue",
+      message: "Max line length:",
       default: 80,
       when: (answers) => answers.maxLineLength,
     },
@@ -187,7 +239,7 @@ async function interactiveConfig(baseConfig: FormatterConfig): Promise<Formatter
   const config: FormatterConfig = {
     rules: [
       {
-        name: 'indentation',
+        name: "indentation",
         enabled: true,
         options: {
           style: answers.indentStyle,
@@ -195,25 +247,25 @@ async function interactiveConfig(baseConfig: FormatterConfig): Promise<Formatter
         },
       },
       {
-        name: 'line-ending',
+        name: "line-ending",
         enabled: true,
         options: { style: answers.lineEnding },
       },
       {
-        name: 'trailing-whitespace',
+        name: "trailing-whitespace",
         enabled: answers.trailingWhitespace,
       },
       {
-        name: 'final-newline',
+        name: "final-newline",
         enabled: answers.finalNewline,
         options: { insert: answers.finalNewline },
       },
       {
-        name: 'max-line-length',
+        name: "max-line-length",
         enabled: answers.maxLineLength,
         options: {
           length: answers.maxLineLengthValue || 80,
-          action: 'warn',
+          action: "warn",
         },
       },
     ],
