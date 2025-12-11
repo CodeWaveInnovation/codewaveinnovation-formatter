@@ -4,16 +4,16 @@
 
 # @codewaveinnovation/formatter
 
-## Clases
+## Classes
 
 ### `abstract` BaseFormattingRule
 
-Definido en: [rules/BaseFormattingRule.ts:8](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/BaseFormattingRule.ts#L8)
+Defined in: [rules/BaseFormattingRule.ts:8](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/BaseFormattingRule.ts#L8)
 
-Clase base abstracta para reglas (Patrón Template Method)
-Reduce la duplicación de código
+Abstract base class for rules (Template Method Pattern)
+Reduces code duplication
 
-#### Extendida por
+#### Extended by
 
 - [`IndentationRule`](#indentationrule)
 - [`LineEndingRule`](#lineendingrule)
@@ -21,31 +21,31 @@ Reduce la duplicación de código
 - [`FinalNewlineRule`](#finalnewlinerule)
 - [`MaxLineLengthRule`](#maxlinelengthrule)
 
-#### Implementa
+#### Implements
 
 - [`IFormattingRule`](#iformattingrule)
 
-#### Constructores
+#### Constructors
 
 ##### Constructor
 
 > **new BaseFormattingRule**(): [`BaseFormattingRule`](#baseformattingrule)
 
-###### Retorna
+###### Returns
 
 [`BaseFormattingRule`](#baseformattingrule)
 
-#### Propiedades
+#### Properties
 
 ##### description
 
 > `abstract` `readonly` **description**: `string`
 
-Definido en: [rules/BaseFormattingRule.ts:10](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/BaseFormattingRule.ts#L10)
+Defined in: [rules/BaseFormattingRule.ts:10](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/BaseFormattingRule.ts#L10)
 
-Descripción de lo que hace la regla
+Description of what the rule does
 
-###### Implementación de
+###### Implementation of
 
 [`IFormattingRule`](#iformattingrule).[`description`](#description-6)
 
@@ -53,35 +53,35 @@ Descripción de lo que hace la regla
 
 > `abstract` `readonly` **name**: `string`
 
-Definido en: [rules/BaseFormattingRule.ts:9](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/BaseFormattingRule.ts#L9)
+Defined in: [rules/BaseFormattingRule.ts:9](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/BaseFormattingRule.ts#L9)
 
-Nombre único de la regla
+Unique name of the rule
 
-###### Implementación de
+###### Implementation of
 
 [`IFormattingRule`](#iformattingrule).[`name`](#name-8)
 
-#### Métodos
+#### Methods
 
 ##### apply()
 
 > **apply**(`context`): [`FormatResult`](#formatresult)
 
-Definido en: [rules/BaseFormattingRule.ts:12](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/BaseFormattingRule.ts#L12)
+Defined in: [rules/BaseFormattingRule.ts:12](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/blob/1ea1a254059a9b8aa5038aa465a1450042bf2478/src/rules/BaseFormattingRule.ts#L12)
 
-Aplicar la regla de formateo al contenido
+Apply the formatting rule to the content
 
-###### Parámetros
+###### Parameters
 
 ###### context
 
 [`FormatContext`](#formatcontext)
 
-###### Retorna
+###### Returns
 
 [`FormatResult`](#formatresult)
 
-###### Implementación de
+###### Implementation of
 
 [`IFormattingRule`](#iformattingrule).[`apply`](#apply-12)
 
