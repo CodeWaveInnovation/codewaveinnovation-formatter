@@ -16,7 +16,7 @@
     "prepare": "husky",
     "prepublishOnly": "npm run build",
     "docs:dev": "vitepress dev docs",
-    "docs:build": "npm run docs:api && vitepress build docs",
+    "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "docs:api": "typedoc"
   },
