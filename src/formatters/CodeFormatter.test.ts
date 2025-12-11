@@ -1,10 +1,10 @@
-import { CodeFormatter } from '../formatters/CodeFormatter';
-import { RuleRegistry } from '../formatters/RuleRegistry';
-import { IndentationRule } from '../rules/IndentationRule';
-import { TrailingWhitespaceRule } from '../rules/TrailingWhitespaceRule';
-import { FormatterConfig } from '../interfaces/types';
+import { CodeFormatter } from "../formatters/CodeFormatter";
+import { RuleRegistry } from "../formatters/RuleRegistry";
+import { IndentationRule } from "../rules/IndentationRule";
+import { TrailingWhitespaceRule } from "../rules/TrailingWhitespaceRule";
+import { FormatterConfig } from "../interfaces/types";
 
-describe('CodeFormatter', () => {
+describe("CodeFormatter", () => {
   let registry: RuleRegistry;
   let formatter: CodeFormatter;
 
@@ -13,9 +13,9 @@ describe('CodeFormatter', () => {
     formatter = new CodeFormatter(registry);
   });
 
-  describe('format', () => {
-    it('should return unchanged content when no rules are configured', async () => {
-      const content = 'hello world';
+  describe("format", () => {
+    it("should return unchanged content when no rules are configured", async () => {
+      const content = "hello world";
       const config: FormatterConfig = { rules: [] };
 
       const result = await formatter.format(content, config);
@@ -25,27 +25,37 @@ describe('CodeFormatter', () => {
       expect(result.appliedRules).toEqual([]);
     });
 
-    it('should apply enabled rules', async () => {
+    it("should apply enabled rules", async () => {
       registry.register(new TrailingWhitespaceRule());
-      
-      const content = 'hello world   \n';
+
+      const content = "hello world   \n";
       const config: FormatterConfig = {
-        rules: [{ name: 'trailing-whitespace', enabled: true }],
+        rules: [{ name: "trailing-whitespace", enabled: true }],
       };
 
       const result = await formatter.format(content, config);
 
-      expect(result.content).toBe('hello world\n');
+      expect(result.content).toBe("hello world\n");
       expect(result.changed).toBe(true);
-      expect(result.appliedRules).toContain('trailing-whitespace');
+      expect(result.appliedRules).toContain("trailing-whitespace");
     });
 
-    it('should skip disabled rules', async () => {
+    it("should handle formatting without config (use empty rules)", async () => {
+      const content = "hello world   ";
+
+      const result = await formatter.format(content);
+
+      expect(result.content).toBe(content);
+      expect(result.changed).toBe(false);
+      expect(result.appliedRules).toEqual([]);
+    });
+
+    it("should skip disabled rules", async () => {
       registry.register(new TrailingWhitespaceRule());
-      
-      const content = 'hello world   ';
+
+      const content = "hello world   ";
       const config: FormatterConfig = {
-        rules: [{ name: 'trailing-whitespace', enabled: false }],
+        rules: [{ name: "trailing-whitespace", enabled: false }],
       };
 
       const result = await formatter.format(content, config);
@@ -55,15 +65,19 @@ describe('CodeFormatter', () => {
       expect(result.appliedRules).toEqual([]);
     });
 
-    it('should apply multiple rules in order', async () => {
+    it("should apply multiple rules in order", async () => {
       registry.register(new TrailingWhitespaceRule());
       registry.register(new IndentationRule());
-      
-      const content = '    hello   \n  world   ';
+
+      const content = "    hello   \n  world   ";
       const config: FormatterConfig = {
         rules: [
-          { name: 'indentation', enabled: true, options: { style: 'space', size: 2 } },
-          { name: 'trailing-whitespace', enabled: true },
+          {
+            name: "indentation",
+            enabled: true,
+            options: { style: "space", size: 2 },
+          },
+          { name: "trailing-whitespace", enabled: true },
         ],
       };
 
@@ -73,10 +87,10 @@ describe('CodeFormatter', () => {
       expect(result.appliedRules.length).toBeGreaterThan(0);
     });
 
-    it('should handle non-existent rules gracefully', async () => {
-      const content = 'hello world';
+    it("should handle non-existent rules gracefully", async () => {
+      const content = "hello world";
       const config: FormatterConfig = {
-        rules: [{ name: 'non-existent-rule', enabled: true }],
+        rules: [{ name: "non-existent-rule", enabled: true }],
       };
 
       const result = await formatter.format(content, config);
