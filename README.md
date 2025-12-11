@@ -1,7 +1,7 @@
 # @codewaveinnovation/formatter
 
-[![npm version](https://badge.fury.io/js/@codewaveinnovation%2Fformatter.svg)](https://www.npmjs.com/package/@codewaveinnovation/formatter)
-[![npm downloads](https://img.shields.io/npm/dm/@codewaveinnovation/formatter)](https://www.npmjs.com/package/@codewaveinnovation/formatter)
+[![npm version](https://img.shields.io/npm/v/@codewaveinnovation/formatter)](https://www.npmjs.com/package/@codewaveinnovation/formatter)
+[![npm downloads](https://img.shields.io/npm/dt/@codewaveinnovation/formatter)](https://www.npmjs.com/package/@codewaveinnovation/formatter)
 [![Tests](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/actions/workflows/test.yml/badge.svg)](https://github.com/CodeWaveInnovation/codewaveinnovation-formatter/actions/workflows/test.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)](https://nodejs.org)
